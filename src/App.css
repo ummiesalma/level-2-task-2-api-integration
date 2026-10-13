@@ -1,0 +1,162 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #20243a;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #4338ca, #7c3aed);
+  color: white;
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.header h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.header p {
+  font-size: 17px;
+  color: #e8e7ff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 20px;
+}
+
+.search {
+  display: block;
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px solid #d8dbea;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+  margin-bottom: 22px;
+}
+
+.search:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px #6366f122;
+}
+
+.results {
+  margin-bottom: 20px;
+  color: #62677b;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.user-card {
+  background: white;
+  border: 1px solid #e6e8f1;
+  border-radius: 16px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 5px 18px #20243a0a;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow-wrap: anywhere;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px #20243a16;
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #e9e7ff;
+  color: #5145cd;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.user-card h2 {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.user-card p {
+  color: #666b7e;
+  font-size: 14px;
+  margin: 9px 0;
+}
+
+.user-card .city {
+  color: #4338ca;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.user-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #4338ca;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.user-card a:hover {
+  background: #312e81;
+}
+
+.message {
+  text-align: center;
+  padding: 35px 10px;
+  color: #62677b;
+}
+
+.error {
+  color: #dc2626;
+}
+
+@media (max-width: 850px) {
+  .user-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    padding: 40px 15px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 25px 15px;
+  }
+}
